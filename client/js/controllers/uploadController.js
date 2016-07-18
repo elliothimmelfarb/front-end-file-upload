@@ -16,7 +16,7 @@
         data: { file: vm.file, name: 'HELI' },
       })
       .then(res => {
-        console.log('res:', res);
+        vm.savedImage = res.data;
       })
       .catch(err => {
         console.log(err);

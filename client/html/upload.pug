@@ -2,7 +2,12 @@ h1 Upload!
 
 form.form-inline(ng-submit='submit()' name='uploadForm')
   .form-group
-    .button.btn.btn-default(ngf-select ng-model='file') Select File
+    //- .button.btn.btn-default(
+    //-   ngf-select 
+    //-   ng-model='file'
+    //-   ngf-max-size='50MB') Select File
+    .drop-box(ngf-drop ng-model='file' ngf-drag-over-class="'dragover'")
   .form-group
     button.btn.btn-success Submit
-pre {{file}}      
+//- img(ngf-thumbnail='file' width='300px')
+img(ng-src='{{savedImage}}')    

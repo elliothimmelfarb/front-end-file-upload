@@ -7,6 +7,7 @@
     'ngAnimate',
     'ngTouch',
     'ui.bootstrap',
+    'ngFileUpload',
   ])
   .config(config);
 
@@ -15,6 +16,11 @@
     .state('home', {
       url: '/',
       templateUrl: '/html/home.html',
+    })
+    .state('upload', {
+      url: '/upload',
+      templateUrl: '/html/upload.html',
+      controller: 'uploadController',
     });
     $urlRouterProvider.otherwise('/');
   }

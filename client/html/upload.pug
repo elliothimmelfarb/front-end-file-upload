@@ -1,0 +1,8 @@
+h1 Upload!
+
+form.form-inline(ng-submit='submit()' name='uploadForm')
+  .form-group
+    .button.btn.btn-default(ngf-select ng-model='file') Select File
+  .form-group
+    button.btn.btn-success Submit
+pre {{file}}      

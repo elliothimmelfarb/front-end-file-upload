@@ -15,14 +15,14 @@ head
   script(src="/bower_components/angular-ui-router/release/angular-ui-router.js", charset="utf-8")
   script(src="/bower_components/sweetalert/dist/sweetalert.min.js", charset="utf-8")
   script(src="/bower_components/ngSweetAlert/SweetAlert.min.js", charset="utf-8")
+  script(src="/bower_components/ng-file-upload/ng-file-upload-shim.min.js", charset="utf-8")
+  script(src="/bower_components/ng-file-upload/ng-file-upload.min.js", charset="utf-8")
 
   script(src="/js/bundle.js")
 
 body(ng-app='myApp', ng-controller='mainController as main')
   .container-fluid
     h1 #{title}
+    button.btn.btn-default(ui-sref='upload') Upload
     
-    form(action='/api/files' method='POST')
-      input(type="file")
-      button.btn.btn-default submit
-    //- ui-view
+    ui-view
